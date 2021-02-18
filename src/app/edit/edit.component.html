@@ -1,0 +1,40 @@
+<div class="main-edit-profile-component">
+  <div class="container">
+    <h2 class="form-header">Use the form below to update your profile.</h2>
+    <form #editForm="ngForm" class="form" (ngSubmit)="setUserProfile(editForm)">
+      <label class="blue" for="name">Name</label>
+      <input
+        class="form-input"
+        type="text"
+        name="name"
+        id="name"
+        [ngModel]="user.name"
+      />
+      <label class="blue" for="contact">Contact</label>
+      <input
+        class="form-input"
+        type="text"
+        name="contact"
+        id="contact"
+        [ngModel]="user.contact"
+      />
+      <label class="blue" for="bio">Bio</label>
+      <textarea
+        class="form-input"
+        name="bio"
+        id="bio"
+        cols="30"
+        rows="10"
+        [ngModel]="user.bio"
+      ></textarea>
+      <button
+        class="button"
+        (mouseover)="hover = true"
+        (mouseout)="hover = false"
+        [ngClass]="{ hover: hover }"
+      >
+        Update
+      </button>
+    </form>
+  </div>
+</div>

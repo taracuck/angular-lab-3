@@ -1,0 +1,17 @@
+<main class="main-profile-component">
+  <div class="container">
+    <img class="profile-image" src="/assets/lua.png" />
+    <h1>{{ user.name }}</h1>
+    <p class="contact-info">{{ user.contact }}</p>
+    <p class="bio">{{ user.bio }}</p>
+    <button
+      routerLink="/edit-profile"
+      class="button"
+      (mouseover)="hover = true"
+      (mouseout)="hover = false"
+      [ngClass]="{ hover: hover }"
+    >
+      Edit
+    </button>
+  </div>
+</main>
